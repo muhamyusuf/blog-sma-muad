@@ -11,7 +11,8 @@ module.exports = {
       'dwgyu36up6iuz.cloudfront.net',
       'cdn.hashnode.com',
       'res.craft.do',
-      'res.cloudinary.com'
+      'res.cloudinary.com',
+      'prod-files-secure.s3.us-west-2.amazonaws.com'
     ]
   }
 };

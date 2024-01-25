@@ -59,7 +59,7 @@ export function renderBlocks(block) {
               type="checkbox"
               checked={value?.checked}
               readOnly
-              className="w-4 h-4 text-teal-500 border-gray-300 rounded focus:ring-teal-500"
+              className="focus:ring-teal-500 w-4 h-4 text-teal-500 border-gray-300 rounded"
             />
             <Text text={value.text} />
           </label>
@@ -83,10 +83,10 @@ export function renderBlocks(block) {
       const caption = value.caption.length >= 1 ? value.caption[0].plain_text : '';
       return (
         <figure className="mt-0">
-          <img
-            className="rounded-lg aspect-video"
+          <Image
+            className="aspect-video rounded-lg"
             src={src}
-            placeholder="blur"
+            layout="fill"
             alt={caption ? caption : 'A visual depiction of what is being written about'}
           />
           {caption && <figcaption className="text-center">{caption}</figcaption>}
@@ -115,7 +115,7 @@ export function renderBlocks(block) {
       return <YoutubeEmbed url={value?.external?.url || ''} />;
     case 'quote':
       return (
-        <blockquote className="p-4 rounded-r-lg bg-gray-50">
+        <blockquote className="bg-gray-50 p-4 rounded-r-lg">
           <Text text={value.text} />
         </blockquote>
       );
